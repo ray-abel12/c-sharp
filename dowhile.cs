@@ -11,11 +11,15 @@ namespace doWhileLoop
                 Console.WriteLine("enter name");
                 var input = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(input))
+                if (!string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("@echo " + input);
+                    continue;
+                }
+                else
                 {
                     break;
                 }
-                Console.WriteLine("@echo "+input);
             }
         }
     }
