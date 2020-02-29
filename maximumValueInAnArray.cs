@@ -2,7 +2,7 @@
 
 namespace series_of_numbers
 {
-    class Program
+    class MaximumValueInAnArray
     {
        
     
