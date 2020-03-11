@@ -1,22 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net.Sockets;
 
-namespace dateTime
+namespace play7
 {
-    public class DateTime
+    class Program
     {
         static void Main(string[] args)
         {
-       var dateTime =new DateTime();
-       var now = System.DateTime.Now;
-       var today = System.DateTime.Today;
+             var dateTime = new DateTime(2015,1,1);
+             var now = DateTime.Now;
+             var today = DateTime.Today;
+             var tomorrow = dateTime.AddDays(1);
+             
+          //   Console.WriteLine(dateTime);
+             /*Console.WriteLine("hour "+now.Hour);
+             Console.WriteLine("minute "+now.Minute);
+             Console.WriteLine("seconds "+now.Second);
+             Console.WriteLine("miliseconds "+now.Millisecond);*/
 
-     //  Console.WriteLine($"{now.Hour}:{now.Minute}:{now.Second}");
-     var tomorrow = now.AddDays(1);
-     var yerstaday = now.AddDays(-1);
-
-     Console.WriteLine(now.ToLongDateString());
-     Console.WriteLine(now.ToShortDateString());
-     Console.WriteLine(now.ToString("F"));
+             Console.WriteLine(now.ToLongDateString());
+             Console.WriteLine(now.ToLongTimeString());
+             Console.WriteLine(now.ToShortDateString());
+             Console.WriteLine(now.ToShortTimeString());
+             Console.WriteLine(now.ToString("U"));
 
         }
     }
