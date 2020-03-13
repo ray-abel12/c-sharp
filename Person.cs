@@ -6,9 +6,9 @@ namespace FirstMethod
    {
        public String Name ;
 
-       public  void Introduce()
+       public  void Introduce(string to)
        {
-           Console.WriteLine("Hello my name is "+ Name);
+           Console.WriteLine("Hi {0} i am {1}",to,Name);
        }
 
        public static Person Parse(String str)
@@ -19,10 +19,10 @@ namespace FirstMethod
        }
        static void Main(string[] args)
        {
-           var program = new Person();
-           var p = Person.Parse("john");
-           Console.WriteLine(p);
-           
+           var person = new Person();
+           person.Name = "abel";
+           person.Introduce("mosh");
+
        }
     }
 }
