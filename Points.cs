@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace Methods
 {
     public class Points
@@ -15,6 +17,12 @@ namespace Methods
         {
             this.X = y;
             this.Y = y;
+        }
+
+        public void Move(Point newLocation)
+        {
+            this.X = newLocation.X;
+            this.X = newLocation.Y;
         }
     }
 }
