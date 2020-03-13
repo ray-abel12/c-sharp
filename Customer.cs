@@ -4,7 +4,8 @@ namespace ConstructorPlay
 {
     public class Customer
     {
-        public String Name;
+        public int Id;
+        public string Name;
         public Customer(string play)
         {
             this.Name = play;
