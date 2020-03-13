@@ -18,11 +18,14 @@ namespace FirstMethod
           return program;
        }
        static void Main(string[] args)
-       {
-           var person = new Person();
-           person.Name = "abel";
-           person.Introduce("mosh");
+      {
+//           var person = new Person();
+//           person.Name = "abel";
+           // person.Introduce("mosh");
+          //using the static method
+          var person = Person.Parse("john");
+          person.Introduce("morsh");
 
-       }
+      }
     }
 }
