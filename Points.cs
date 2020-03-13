@@ -22,7 +22,7 @@ namespace Methods
         public void Move(Point newLocation)
         {
             this.X = newLocation.X;
-            this.X = newLocation.Y;
+            this.Y = newLocation.Y;
         }
     }
 }
