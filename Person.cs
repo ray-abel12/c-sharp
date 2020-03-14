@@ -1,31 +1,20 @@
-﻿using System;
+using System;
 
-namespace FirstMethod
+namespace AccessModifier
 {
-   public class Person
-   {
-       public String Name ;
+    public class Person
+    {
+        private DateTime _birthdate;
 
-       public  void Introduce(string to)
-       {
-           Console.WriteLine("Hi {0} i am {1}",to,Name);
-       }
+        public void SetBirthdate(DateTime birthdate)
+        {
+            _birthdate = birthdate;
+        }
 
-       public static Person Parse(String str)
-       {
-          var program = new Person();
-          program.Name = str;
-          return program;
-       }
-       static void Main(string[] args)
-      {
-//           var person = new Person();
-//           person.Name = "abel";
-           // person.Introduce("mosh");
-          //using the static method
-          var person = Person.Parse("john");
-          person.Introduce("morsh");
+        public DateTime GetBirthdate()
+        {
+            return _birthdate;
+        }
 
-      }
     }
 }
