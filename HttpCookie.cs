@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Indexer
@@ -6,6 +7,7 @@ namespace Indexer
     {
         //key is string and value is string
         private readonly Dictionary<string, string> _dictionary;
+        public DateTime Expiry { get; set; }
 
         public HttpCookie()
         {
