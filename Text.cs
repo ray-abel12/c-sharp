@@ -1,3 +1,5 @@
+using System;
+
 namespace Inheritance
 {
     public class Text : PresentationObjec
@@ -7,7 +9,7 @@ namespace Inheritance
 
         public void AddHyperLink(string url)
         {
-            
+            Console.WriteLine("we added a link you ur url "+url);
         }
     }
 }
