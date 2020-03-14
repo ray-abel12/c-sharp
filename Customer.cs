@@ -6,7 +6,7 @@ namespace Fields
     {
         public int Id;
         public string Name;
-        public readonly List<Order> Orders = new List<Order>();
+        public  readonly List<Order> Orders = new List<Order>();
 
         public Customer(int id)
         {
@@ -21,7 +21,7 @@ namespace Fields
 
         public void Promote()
         {
-            //......
+            Orders =new List<Order>();
         }
     }
 }
