@@ -4,6 +4,10 @@ namespace Properties
 {
     public class Student
     {
+        public Student(DateTime birthDate)
+        {
+            BirthDate = birthDate;
+        }
         public DateTime BirthDate { set; get; }
 
         public int Age
