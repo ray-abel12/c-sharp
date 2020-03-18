@@ -16,6 +16,7 @@ namespace String
             Console.WriteLine("lastName " + name[1]);
          var replace = fullName.Replace("ray", "obeya");
          Console.WriteLine(replace);
+         Console.WriteLine("it works ");
         }
     }
 }
