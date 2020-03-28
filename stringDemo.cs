@@ -20,12 +20,18 @@ namespace StringDemo
          Console.WriteLine(result3);
             Console.WriteLine(newName);
             */
-            var fullName = "abel ray";
+            /*var fullName = "abel ray";
             var index = fullName.IndexOf(' ');
             var name = fullName.Substring(0, index);
             var lastName = fullName.Substring(index + 1);
             Console.WriteLine(name);
-            Console.WriteLine(lastName);
+            Console.WriteLine(lastName);*/
+            
+            var fullName = "abel ray";
+            var names = fullName.Split(' ');
+            
+            Console.WriteLine("firstName "+ names[0]);
+            Console.WriteLine("lastName "+ names[1]);
         }
     }
 }
