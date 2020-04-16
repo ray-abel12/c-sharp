@@ -23,7 +23,7 @@ namespace Hypen_Numbers
             
             if((temp == 1) || (temp == -1)
             {
-                Console.WriteLine("");
+                Console.WriteLine("Conse");
             }
 
         }
