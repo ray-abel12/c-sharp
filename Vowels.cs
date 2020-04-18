@@ -15,17 +15,35 @@ namespace Vowels
 
             var words = new List<char>();
             var value = 0;
+            foreach (var index in input)
+            {
+                words.Add(index);
+            }
 
             for (int i = 0; i < words.Count; i++)
             {
                 if (words[i] == 'a')
                 {
                     value++;
+                    
                 }else if (words[i] == 'e')
                 {
                     value++;
-                }
+                } else if (words[i] == 'i')
+                {
+                 value++;
+                 }else if (words[i] == 'o')
+            {
+                value++;
+            }else if (words[i] == 'u')
+            {
+                value++;
+                
             }
+
+                
+            }
+            Console.WriteLine(value);
         }
     }
 }
