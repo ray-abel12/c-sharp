@@ -9,41 +9,61 @@ namespace Vowels
         {
             Console.WriteLine("enter a english word");
             var input = Console.ReadLine().ToLower();
-            
-            if(string.IsNullOrWhiteSpace(input))
-                return;
 
-            var words = new List<char>();
-            var value = 0;
-            foreach (var index in input)
+            var vowels = new List<char>(new char[] {'a', 'e', 'i', 'o', 'u'});
+            var vowelCount = 0;
+            foreach (var character in input)
             {
-                words.Add(index);
+                if (vowels.Contains(character))
+                    vowelCount++;
             }
 
-            for (int i = 0; i < words.Count; i++)
-            {
-                if (words[i] == 'a')
-                {
-                    value++;
-                    
-                }else if (words[i] == 'e')
-                {
-                    value++;
-                } else if (words[i] == 'i')
-                {
-                 value++;
-                 }else if (words[i] == 'o')
-            {
-                value++;
-            }else if (words[i] == 'u')
-            {
-                value++;
-                
-            }
-
-                
-            }
-            Console.WriteLine(value);
+            Console.WriteLine(vowelCount);
         }
     }
 }
+
+
+
+
+
+
+
+
+/*Console.WriteLine("enter a english word");
+var input = Console.ReadLine().ToLower();
+
+if(string.IsNullOrWhiteSpace(input))
+    return;
+
+var words = new List<char>();
+var value = 0;
+foreach (var index in input)
+{
+    words.Add(index);
+}
+
+for (int i = 0; i < words.Count; i++)
+{
+    if (words[i] == 'a')
+    {
+        value++;
+        
+    }else if (words[i] == 'e')
+    {
+        value++;
+    } else if (words[i] == 'i')
+    {
+     value++;
+     }else if (words[i] == 'o')
+{
+    value++;
+}else if (words[i] == 'u')
+{
+    value++;
+    
+}
+
+    
+}
+Console.WriteLine(value);*/
