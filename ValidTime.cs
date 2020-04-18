@@ -20,7 +20,10 @@ namespace ValidDateTime
             {
                 Console.WriteLine("valid time");
             }
-           
+            else
+            {
+                Console.WriteLine("invalid time");
+            }
             }
             catch (Exception e)
             {
