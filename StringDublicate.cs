@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 
 namespace StringDublicate
 {
@@ -7,13 +9,7 @@ namespace StringDublicate
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                Console.WriteLine("enter numbers seperated by -");
-                var userInput = Console.ReadLine();
-                var numbers = userInput.Split('-').Select(text => Convert.ToInt32(text));
-                if (string.IsNullOrWhiteSpace(userInput)) break;
-            }
+            
         }
-    }
+        }
 }
