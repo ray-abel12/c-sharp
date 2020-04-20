@@ -16,16 +16,26 @@ namespace PascalCase
                 return;
             }
 
+            var variableName = GetwordWithPascalCase(input);
+            Console.WriteLine(variableName);
+
+        }
+
+        public static string GetwordWithPascalCase(string input)
+        {
+           
             var variableName = "";
             foreach (var word in input.Split(' '))
             {
                 var wordWithPascalCase = char.ToUpper(word[0]) + word.ToLower().Substring(1);
-                Console.WriteLine(word[0]);
+                
                 variableName += wordWithPascalCase;
             }
 
-            Console.WriteLine(variableName);
+            
+            return variableName;
         }
+        
 
         }
     }
