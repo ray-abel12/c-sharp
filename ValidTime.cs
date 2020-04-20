@@ -13,24 +13,33 @@ namespace ValidDateTime
             if (string.IsNullOrWhiteSpace(input))
                 return;
 
+            var isValid = isTimeValid(input);
+            var message = isValid ? "valid Time" : "Invalid Time";
+            Console.WriteLine(message);
+        }
+
+        public static bool isTimeValid(string input)
+        {
+            var isValid = false;
             var time = Convert.ToDouble(input);
             try
             {
-            if((time >00.00) &&(time<23.59))
-            {
-                Console.WriteLine("valid time");
-            }
-            else
-            {
-                Console.WriteLine("invalid time");
-            }
+                if((time >00.00) &&(time<23.59))
+                {
+                    isValid = true;
+                }
+                else
+                {
+                    isValid = false;
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine("invalid time");
+                isValid = false;
                 throw;
             }
 
+            return isValid;
         }
     }
 }
