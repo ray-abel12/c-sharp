@@ -21,6 +21,14 @@ namespace StringDublicate
                 number.Add(Convert.ToInt32(numbers));
             }
 
+
+            var isDuplicate = GetUnique(number);
+            var message = isDuplicate ? "Yes There is Duplicate" : "No Duplicate found";
+            Console.WriteLine(message);
+        }
+
+        public static bool GetUnique(List<int> number)
+        {
             var unique = new List<int>();
             var isDuplicate = false;
             foreach (var numbers in number)
@@ -36,8 +44,7 @@ namespace StringDublicate
                 }
             }
 
-            var message = isDuplicate ? "Yes There is Duplicate" : "No Duplicate found";
-            Console.WriteLine(message);
+            return isDuplicate;
         }
     }
 }
