@@ -1,46 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FacebookLikes
+namespace Facebook
 {
-    public class FacebookLikes
-
+    class FacebookLikes
     {
         static void Main(string[] args)
         {
-            
-            var listName = new List<string>();
-          //  var userName = Console.ReadLine();
-          var convertedUserName = "hello";
-            while (convertedUserName != string.Empty)
+            var userNames = new List<string>();
+            while (true)
             {
-                Console.WriteLine("enter facebook names or enter to end");
-                var userName = Console.ReadLine();
-                convertedUserName = Convert.ToString(userName);
-                listName.Add(convertedUserName);
+                Console.WriteLine("enter name");
+                var name = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(name))
+                    break;
+                
 
+                userNames.Add(name);
                 
             }
-
-            if (listName.Count == 0)
+            GetNumberOfUser(userNames);
+        }
+        public static void GetNumberOfUser(List<string> userNames)
+        {
+            var numberOfUsers = userNames.Count - 2;
+            if (userNames.Count == 0)
+                Console.WriteLine("");
+            else if(userNames.Count ==1)
+                Console.WriteLine(userNames[0] + "likes your post");
+            else if(userNames.Count ==2)
+                Console.WriteLine("{0} and {1} like your post",userNames[0],userNames[1]);
+            else if (userNames.Count > 2)
+                Console.WriteLine("{0},{1} and {2} other liked your post",userNames[0],userNames[1],numberOfUsers);
+            else
             {
-                Console.WriteLine("no likes");
+                Console.WriteLine("error");
             }
 
-            if (listName.Count == 1)
-            {
-                Console.WriteLine($"{listName[0]}  like your post");
-            }
-            if (listName.Count == 2)
-            {
-                Console.WriteLine($"{listName[0]} and {listName[1]}  like your post");
-            }
-            if (listName.Count > 2)
-            {
-                var otherUsers = listName.Count - 2;
-                Console.WriteLine($"{listName[0]} {listName[1]} and {otherUsers} other person likes your post");
-            }
-
+            
         }
     }
 }
