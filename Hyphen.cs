@@ -11,21 +11,32 @@ namespace Hypen_Numbers
         {
             Console.WriteLine("Enter number seperated by hypen");
             var userInput = Console.ReadLine();
-            var numbers = userInput.Split('-').Select(text => Convert.ToInt32(text));
             var numberList = new List<int>();
-            
+            var isConsecutive = GetNumbers(userInput, numberList);
+            var isConsective = isConsecutive ? "Consecutive" : "Not Consective";
+            Console.WriteLine(isConsective);
+        }
+
+        public static bool  GetNumbers(string userInput, List<int> numberList)
+        {
+            var numbers = userInput.Split('-').Select(text => Convert.ToInt32(text));
+            var isConsecutive = false;
             foreach (var index in numbers)
             {
-               numberList.Add(index);
+                numberList.Add(Convert.ToInt32(index));
             }
 
             var temp = numberList[0] - numberList[1];
             
-            if((temp == 1) || (temp == -1)
+            if((temp == 1) || (temp == -1))
             {
-                Console.WriteLine("Conse");
+                isConsecutive = true;
+            }else
+            {
+                isConsecutive = false;
             }
 
+            return isConsecutive;
         }
     }
 }
